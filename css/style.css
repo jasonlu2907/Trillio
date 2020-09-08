@@ -40,7 +40,6 @@
 
 .user-nav {
   align-self: stretch;
-  background-color: greenyellow;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -79,6 +78,23 @@
   .user-nav__user-name {
     margin-left: 2rem; }
 
+.side-nav__item {
+  list-style: none; }
+
+.side-nav__link {
+  text-decoration: none;
+  color: white; }
+
+.side-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -99,10 +115,15 @@
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
-  flex: 1; }
+  flex: 1;
+  background-color: orangered;
+  height: 80rem; }
 
 :root {
   --color-primary: #eb2f64;
@@ -119,7 +140,7 @@
 
 * {
   padding: 0;
-  margin: 0 auto; }
+  margin: 0; }
 
 *,
 *::before,

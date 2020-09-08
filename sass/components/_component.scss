@@ -120,3 +120,34 @@
     margin-left: 2rem;
   }
 }
+
+///////////////////////
+// SIDEBAR-NAV
+.side-nav {
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+
+////////////////////////////////////////
+// LEGAL TEXT
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+
+  // @media only screen and (max-width: $bp-medium) {
+  //   display: none;
+  // }
+}
