@@ -107,9 +107,6 @@
     align-items: center;
   }
 
-  &__user {
-  }
-
   &__user-photo {
     height: 3.75rem;
     width: 3.75rem;
@@ -124,18 +121,67 @@
 ///////////////////////
 // SIDEBAR-NAV
 .side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+
   &__item {
     list-style: none;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
-  &__link {
+  &__item::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: scaleY(0);
+    // transform-origin: bottom;
+    transition: transform 0.2s, 
+                width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+                background-color 0.1s;
+  }
+
+  // active co san Home -> tao them 1 class --active roi set chung vs cai nay
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+  }
+
+  &__link:link,
+  &__link:visited {
     text-decoration: none;
-    color: white;
+    color: var(--color-grey-light-1);
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+
+    // boi vi svg voi dong chu ko align voi nhau nen -> dung flex de fix
+    display: flex;
+    align-items: center;
+
+    // Cai animation che link lai nen f dung z-index, muon dung z-index thi f dung position
+    position: relative;
+    z-index: 10;
   }
 
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
+    margin-right: 2rem;
+    fill: var(--color-grey-light-1);
   }
 }
 
