@@ -95,7 +95,7 @@
     top: 0;
     left: 0;
     transform: scaleY(0);
-    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
   .side-nav__item:hover::before, .side-nav__item--active::before {
     transform: scaleY(1);
     width: 100%; }
@@ -122,6 +122,23 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex; }
+  .overview__stars {
+    /*Khi dung flex: 1 thi rieng thang Star chiem qua nhieu vi tri dan den viec ko dong deu*/
+    margin-right: auto;
+    /*Trick trong FLEXBOX, dung margin-left auto ben */ }
+  .overview__icon-star, .overview__icon-location {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary); }
 
 .container {
   max-width: 120rem;
@@ -150,7 +167,6 @@
 
 .hotel-view {
   flex: 1;
-  background-color: orangered;
   height: 80rem; }
 
 :root {

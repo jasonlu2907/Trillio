@@ -144,9 +144,8 @@
 
     transform: scaleY(0);
     // transform-origin: bottom;
-    transition: transform 0.2s, 
-                width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
-                background-color 0.1s;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
   }
 
   // active co san Home -> tao them 1 class --active roi set chung vs cai nay
@@ -196,4 +195,52 @@
   // @media only screen and (max-width: $bp-medium) {
   //   display: none;
   // }
+}
+
+////////////////////////////////////////
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+////////////////////////////////////////
+// OVERVIEW
+.overview {
+  display: flex;
+  // Ko dung justify-content boi vi ko giong voi yeu cau
+  // Yeu cau can Heading vs Star gan nhau ---- Location vs Rating gan nhau
+
+  &__heading {
+  }
+
+  &__stars {
+    // flex: 1;
+    /*Khi dung flex: 1 thi rieng thang Star chiem qua nhieu vi tri dan den viec ko dong deu*/
+    margin-right: auto; /*Trick trong FLEXBOX, dung margin-left auto ben Location cung dc*/
+
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+  }
+
+  &__rating {
+  }
+
+  &__rating-count {
+  }
+
+  &__rating-average {
+  }
 }
