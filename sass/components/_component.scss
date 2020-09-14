@@ -142,8 +142,8 @@
     top: 0;
     left: 0;
 
-    transform: scaleY(0);
-    // transform-origin: bottom;
+    transform: scaleY(0); // co nghia la ko thay
+    // transform-origin: bottom; //default: middle
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
       background-color 0.1s;
   }
@@ -164,7 +164,7 @@
     text-decoration: none;
     color: var(--color-grey-light-1);
     text-transform: uppercase;
-    display: block;
+    // display: block;
     padding: 1.5rem 3rem;
 
     // boi vi svg voi dong chu ko align voi nhau nen -> dung flex de fix
@@ -222,7 +222,6 @@
     // flex: 1;
     /*Khi dung flex: 1 thi rieng thang Star chiem qua nhieu vi tri dan den viec ko dong deu*/
     margin-right: auto; /*Trick trong FLEXBOX, dung margin-left auto ben Location cung dc*/
-
   }
 
   &__icon-star,
