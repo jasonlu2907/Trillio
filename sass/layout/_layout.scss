@@ -2,14 +2,14 @@
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-grey-light-2);
-  box-shadow: 0 2rem 6rem var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
 }
 
 .header {
   height: 7rem;
   font-size: 1.4rem;
   background-color: #fff;
-  border-bottom: 0.1rem solid var(--color-grey-light-2);
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between;
@@ -31,8 +31,32 @@
 }
 
 .hotel-view {
+  background-color: #fff;
+  flex: 1;
+}
+
+/*Ba muc tiep theo di chung vs nhau*/
+.detail {
+  display: flex;
+
+  border-bottom: var(--line);
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+}
+
+.description {
+  // width cua tui nay chiem 60% width of the parent
+  flex: 0 0 60%;
+
+  background-color: #fff;
+  padding: 3rem;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-light);
+}
+
+.user-views {
+  // width cua thang nay chiem the remain part
   flex: 1;
 
-  // background-color: orangered;
-  height: 80rem;
+  background-color: yellow;
 }
