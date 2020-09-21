@@ -289,8 +289,17 @@
   cursor: pointer;
   transition: all .2s;
 
+  & span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.2s;
+  }
+
   &:hover {
     color: var(--color-grey-dark-1);
+
+    & span {
+      margin-left: 1.5rem;
+    }
   }
 
   &:focus {
@@ -388,4 +397,71 @@
     margin-right: -1.2rem;
     border: 2px solid #fff;
   }
+}
+
+
+///////////////////////
+// REVIEWS
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
+
+  position: relative;
+
+  &__text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-box {
+    margin-right: auto;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-right: 1.5rem;
+  }
+
+  &__user-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-grey-dark-1);
+    text-transform: uppercase;
+  }
+
+  &__user-date {
+    font-size: 1.1rem;
+    color: var(--color-grey-dark-2);
+  }
+
+  &__point {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+  }
+
+  /*HTML Entities in CSS-TRICKS*/
+  &::before {
+    content: "\201C";
+
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    line-height: 1;
+
+    z-index: 1;
+    font-size: 10rem;
+    color: var(--color-grey-dark-2);
+    font-family: sans-serif;
+  }
+
 }
